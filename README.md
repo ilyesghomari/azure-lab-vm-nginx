@@ -36,4 +36,10 @@ Déployer une machine virtuelle Ubuntu sur Microsoft Azure, y installer un serve
 Depuis ton terminal, tape :
 
 ```bash
-ssh azureuser@IP_PUBLIQUE
+ssh azureuser@IP_PUBLIQUE 
+
+ou si DNS configuré :
+
+ssh azureuser@lab-ilyes.francecentral.cloudapp.azure.com
+
+### 4️⃣ Installer Nginx
