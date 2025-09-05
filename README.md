@@ -93,13 +93,25 @@ http://lab-ilyes.francecentral.cloudapp.azure.com
  
  ---
 
-### 📸 Captures d’écran à inclure
-- Création du groupe de ressources
-- Création de la VM
-- Connexion SSH réussie
-- Nginx actif (systemctl status nginx)
-- Page Nginx dans le navigateur (IP + DNS)
-- VM arrêtée avec état Arrêté (libéré)
+### 📸 Captures d’écran
+
+#### 1. Groupe de ressources
+![Vue d’ensemble du groupe de ressources](images/01-rg-overview.png)
+
+#### 2. Vue d’ensemble de la VM
+![Vue d’ensemble de la VM](images/02-vm-overview.png)
+
+#### 3. Connexion SSH
+![Connexion SSH réussie](images/03-ssh-connection.png)
+
+#### 4. Nginx actif
+![Nginx actif sur la VM](images/04-nginx-status.png)
+
+#### 5. Page Nginx dans le navigateur
+![Page Nginx accessible via navigateur](images/05-nginx-browser.png)
+
+#### 6. VM arrêtée
+![VM arrêtée et libérée dans Azure](images/06-vm-stopped.png)
 
 ---
 
