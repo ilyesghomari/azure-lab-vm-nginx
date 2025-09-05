@@ -6,7 +6,7 @@ Déployer une machine virtuelle Ubuntu sur Microsoft Azure, y installer un serve
 ---
 
 ## ✅ Prérequis
-- Compte Azure (Free Trial avec 200 € de crédits).
+- Compte Azure.
 - Clé SSH générée (ssh-keygen -t ed25519).
 - Accès au portail Azure : [https://portal.azure.com](https://portal.azure.com).
 
@@ -21,7 +21,7 @@ Déployer une machine virtuelle Ubuntu sur Microsoft Azure, y installer un serve
 ---
 
 ### 2️⃣ Créer la machine virtuelle
-- Nom : vm-ubuntu-lab-01
+- Nom : *vm-ubuntu-lab-01*
 - Image : *Ubuntu 24.04 LTS*
 - Taille : *Standard B1s*
 - Authentification : *Clé SSH publique*
@@ -33,12 +33,13 @@ Déployer une machine virtuelle Ubuntu sur Microsoft Azure, y installer un serve
 ---
 
 ### 3️⃣ Connexion SSH
-Depuis ton terminal, tape :
+- Depuis ton terminal, tape :
 
 ```bash
 ssh azureuser@IP_PUBLIQUE
 ```
-ou si DNS configuré :
+
+- ou si DNS configuré :
 
 ```bash
 ssh azureuser@lab-ilyes.francecentral.cloudapp.azure.com
@@ -56,23 +57,26 @@ systemctl status nginx
 ---
 
 ### 5️⃣ Ouvrir le port 80 (HTTP) dans Azure
-•	Aller dans le NSG (vm-ubuntu-lab-01-nsg).
-	•	Ajouter une règle entrante :
-	•	Port : 80
-	•	Protocole : TCP
-	•	Action : Allow
-	•	Priorité : 310
-	•	Nom : allow-http-80
+- Aller dans le NSG (vm-ubuntu-lab-01-nsg).
+- Ajouter une règle entrante :
+  - Port : *80*
+  - Protocole : *TCP*
+  - Action : *Allow*
+  - Priorité : *310*
+  - Nom : *allow-http-80*
 
  ---
 
 ### 6️⃣ Accéder au site
-Dans ton navigateur :
-	•	Avec l’IP publique :
+- Dans ton navigateur :
+- Avec l’IP publique :
+
  ```bash
  http://4.211.201.126
 ```
-•	Avec le DNS Azure :
+
+- Avec le DNS Azure :
+
  ```bash
 http://lab-ilyes.francecentral.cloudapp.azure.com
 ```
@@ -82,32 +86,32 @@ http://lab-ilyes.francecentral.cloudapp.azure.com
  ---
 
 ### 7️⃣ Gestion des coûts
-•	Toujours arrêter la VM quand tu ne l’utilises pas :
-	•	Dans le portail Azure → bouton Arrêter
-	•	Vérifier que l’état est Arrêté (libéré)
-	•	Ça évite de consommer tes crédits inutilement.
+- Toujours arrêter la VM quand tu ne l’utilises pas :
+  - Dans le portail Azure → bouton Arrêter.
+  - Vérifier que l’état est Arrêté (libéré).
+  - Ça évite de consommer tes crédits inutilement.
  
  ---
 
 ### 📸 Captures d’écran à inclure
-	•	Création du groupe de ressources
-	•	Création de la VM
-	•	Connexion SSH réussie
-	•	Nginx actif (systemctl status nginx)
-	•	Page Nginx dans le navigateur (IP + DNS)
-	•	VM arrêtée avec état Arrêté (libéré)
+- Création du groupe de ressources
+- Création de la VM
+- Connexion SSH réussie
+- Nginx actif (systemctl status nginx)
+- Page Nginx dans le navigateur (IP + DNS)
+- VM arrêtée avec état Arrêté (libéré)
 
 ---
 
 ### 🧹 Nettoyage
-Pour supprimer toutes les ressources d’un coup :
-	•	Supprimer le groupe de ressources rg-labs-azure-01.
+- Pour supprimer toutes les ressources d’un coup :
+  - Supprimer le groupe de ressources rg-labs-azure-01
 
  ---
 
 ### 🚀 Résultat attendu
-Tu as :
-	•	Une VM Ubuntu déployée dans Azure
-	•	Un serveur Nginx fonctionnel
-	•	Un accès via IP publique et DNS
-	•	Une gestion optimisée des crédits
+- Tu as :
+  - Une VM Ubuntu déployée dans Azure
+  - Un serveur Nginx fonctionnel
+  - Un accès via IP publique et DNS
+  - Une gestion optimisée des crédits
